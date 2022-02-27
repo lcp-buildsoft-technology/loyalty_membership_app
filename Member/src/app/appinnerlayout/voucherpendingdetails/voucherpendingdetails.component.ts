@@ -59,8 +59,7 @@ export class VoucherpendingdetailsComponent implements OnInit {
     merchantid:''
   }
   constructor(private http: HttpClient, private router:Router, private route:ActivatedRoute) {
-    
-   }
+  }
 
   ngOnInit(): void {    
     this.getUservoucher(); 
@@ -95,7 +94,6 @@ export class VoucherpendingdetailsComponent implements OnInit {
   editvoucherstatus(uservoucher:any) {
   }
 
-  
   getUservoucher()
   {
     this.http.get('http://165.22.50.213:3001/getuservoucher').subscribe((res:any) => 
@@ -179,7 +177,6 @@ export class VoucherpendingdetailsComponent implements OnInit {
   } 
 
   isShows: boolean=true; 
-
   registerArr = [];
     
   public register ={
@@ -228,5 +225,11 @@ export class VoucherpendingdetailsComponent implements OnInit {
     const purl = "/profile?id=" + this.registerArr[0]['_id'];
     console.log(purl)
     this.router.navigateByUrl(purl)
+  }
+
+  myvoucher() {
+    const mvurl = "/myvoucher?id=" + this.registerArr[0]['_id'];
+    console.log(mvurl)
+    this.router.navigateByUrl(mvurl)
   }
 }

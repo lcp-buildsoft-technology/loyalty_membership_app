@@ -8,6 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './voucherlist.component.html',
   styleUrls: ['./voucherlist.component.scss']
 })
+
 export class VoucherlistComponent implements OnInit {
   message:any;
   searchVoucher: string ='';
@@ -22,7 +23,7 @@ export class VoucherlistComponent implements OnInit {
   imagetypeArr:any;
   imagesArr :any;
 
-  public voucher =
+  public voucher = 
   {
     _id:'',
     title:'',
@@ -195,6 +196,7 @@ export class VoucherlistComponent implements OnInit {
   }
 
   registerArr = [];
+  // registerArr = ['_id'];
     
   public register ={
     _id:'',

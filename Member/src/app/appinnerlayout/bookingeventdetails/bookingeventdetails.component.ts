@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-declare var angular:any;
+import { DomSanitizer } from '@angular/platform-browser';
 import { Buffer } from 'buffer';
 import {MatDialog} from '@angular/material/dialog';
 import { FormBuilder } from '@angular/forms';
 import { EventcontactdialogComponent } from '../eventcontactdialog/eventcontactdialog.component';
 import { ActivatedRoute, Router } from '@angular/router';
+declare var angular:any;
 
 @Component({
   selector: 'app-bookingeventdetails',
@@ -43,7 +44,7 @@ export class BookingeventdetailsComponent implements OnInit {
     slot:'',
   }
 
-  constructor(private http: HttpClient, public dialog: MatDialog, private router:Router, private route:ActivatedRoute) { }
+  constructor(private http: HttpClient, private domSanitizer: DomSanitizer, public dialog: MatDialog, private router:Router, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getRegister();
@@ -51,7 +52,6 @@ export class BookingeventdetailsComponent implements OnInit {
     var url= document.URL;
     const myArray = url.split("=");
     this.id = myArray[1];
-    
   }
 
   getEvent()

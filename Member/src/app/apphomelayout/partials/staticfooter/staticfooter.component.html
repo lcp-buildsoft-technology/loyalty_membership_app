@@ -19,7 +19,7 @@
         </li> -->
 
         <li class="nav-item">
-            <a class="nav-link" [class.active]="selectedLink==='booking'" (click)="goBooking('booking')">
+            <a class="nav-link" (click)="goBooking('booking')" [class.active]="selectedLink==='booking'">
                 <span>
                     <i class="nav-icon bi bi-calendar-check"></i>
                     <span class="nav-text">Booking List</span>
@@ -37,7 +37,7 @@
         </li> -->
 
         <li class="nav-item">
-            <a class="nav-link" [class.active]="selectedLink==='profileqr'" (click)="open('profileqr')">
+            <a class="nav-link" (click)="open('profileqr')" [class.active]="selectedLink==='profileqr'">
                 <span>
                     <i class="nav-icon fa fa-qrcode"></i>
                     <span class="nav-text">QR</span>
@@ -64,7 +64,7 @@
         </li> -->
 
         <li class="nav-item">
-            <a class="nav-link" [class.active]="selectedLink==='gamewheel'" (click)="game('gamewheel')">
+            <a class="nav-link" (click)="game('gamewheel')" [class.active]="selectedLink==='gamewheel'">
                 <span>
                     <i class="nav-icon bi bi-controller"></i>
                     <span class="nav-text">Lucky Spin</span>

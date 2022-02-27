@@ -91,7 +91,8 @@ export class NotificationComponent implements OnInit {
   }
 
   registerArr = [];
-    
+  // registerArr = ['_id'];
+
   public register ={
     _id:'',
     phonenumber:'', 

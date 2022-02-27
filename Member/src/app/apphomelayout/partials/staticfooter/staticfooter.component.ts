@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class StaticfooterComponent implements OnInit {
 
-  registerArr =[];
+  // registerArr =[];
   message:any;
   public id:any;
 
@@ -43,7 +43,8 @@ export class StaticfooterComponent implements OnInit {
 
   lol = [];
   public currentmemberid: any;
-
+  registerArr = ['_id'];
+  
   getRegister()
   {
     this.http.get('http://165.22.50.213:3001/getregister').subscribe((res:any) => 
@@ -61,28 +62,28 @@ export class StaticfooterComponent implements OnInit {
   
   open(profileqr: any)
   {    
-    this.selectedLink = profileqr;
     const pqrurl = "/profileqr?id=" + this.registerArr[0]['_id'];
     console.log(pqrurl)
     this.router.navigateByUrl(pqrurl)
+    this.selectedLink = profileqr;
   }
 
   selectedLink = 'b';
 
   goBooking(booking: any)
   {
-    this.selectedLink = booking;
     const bhurl = "/bookinghistory?id=" + this.registerArr[0]['_id'];
-    console.log(bhurl)
     this.router.navigateByUrl(bhurl)
+    this.selectedLink = booking;
+    console.log(bhurl)
   }
 
   game(gamewheel: any)
   {
-    this.selectedLink = gamewheel;
     const gurl = "/gamificationhome?id=" + this.registerArr[0]['_id'];
     console.log(gurl)
     this.router.navigateByUrl(gurl)
+    this.selectedLink = gamewheel;
   }
   
 

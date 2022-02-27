@@ -135,9 +135,9 @@ export class VoucherdetailsComponent implements OnInit {
     this.http.post('http://165.22.50.213:3001/uservoucher', uservoucher).subscribe((res:any) => {
       console.log(res);
       this.message = res;
-      // const vpurl = "/voucherpendingdetails?id=" + this.voucher._id;
-      // console.log(vpurl)
-      // this.router.navigateByUrl(vpurl)
+      const vpurl = "/voucherpendingdetails?id=" + this.voucher._id;
+      console.log(vpurl)
+      this.router.navigateByUrl(vpurl)
     });
     console.log("ok")
   }

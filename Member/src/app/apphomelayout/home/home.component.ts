@@ -62,35 +62,35 @@ export class HomeComponent implements OnInit {
   public srch =[];
 
   //tierlevel
-  public tierlevel ={
-      _id:'',
-      Silver:'',
-      Gold:''
-    }
+  public tierlevel = {
+    _id:'',
+    Silver:'',
+    Gold:''
+  }
 
-    public register ={
-      _id:'',
-      phonenumber:'', 
-      name:'',
-      password:'',
-      birthdate:'',
-      tierlevel:'',
-      pointscollect:'',
-      pointsredeem:'',
-      confirmpwd:'',
-      email:'',
-      username:'',
-      thumbnail:'',
-      address1:'',
-      address2:'',
-      address3:'',
-      state:'',
-      city:'',
-      postcode:'',
-      status:'',
-      createdat:'',
-      totalpoints:''
-    }  
+  public register = {
+    _id:'',
+    phonenumber:'', 
+    name:'',
+    password:'',
+    birthdate:'',
+    tierlevel:'',
+    pointscollect:'',
+    pointsredeem:'',
+    confirmpwd:'',
+    email:'',
+    username:'',
+    thumbnail:'',
+    address1:'',
+    address2:'',
+    address3:'',
+    state:'',
+    city:'',
+    postcode:'',
+    status:'',
+    createdat:'',
+    totalpoints:''
+  }  
 
   //topmerchant
   public houtlet:any = {
