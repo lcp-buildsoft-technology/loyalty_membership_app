@@ -5,6 +5,7 @@ import * as $ from 'jquery';
 declare var angular:any;
 import { Buffer } from 'buffer';
 
+
 import SwiperCore, {
   Autoplay,
   Navigation,
